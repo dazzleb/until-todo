@@ -11,7 +11,9 @@ import SwiftUI
 struct untilApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{ //어플 내의 모든 View가 Navigation View 로 이동
+                ContentView()
+            }
         }
     }
 }
