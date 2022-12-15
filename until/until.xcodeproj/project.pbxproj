@@ -16,6 +16,8 @@
 		28AD6D71294B0AF500059419 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD6D70294B0AF500059419 /* ListView.swift */; };
 		28AD6D73294B0E0E00059419 /* CheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD6D72294B0E0E00059419 /* CheckMarkView.swift */; };
 		28AD6D77294B123600059419 /* TodoTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD6D76294B123600059419 /* TodoTextFieldView.swift */; };
+		28AD6D79294B168500059419 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD6D78294B168500059419 /* ItemModel.swift */; };
+		28AD6D7B294B1FD000059419 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD6D7A294B1FD000059419 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		28AD6D70294B0AF500059419 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		28AD6D72294B0E0E00059419 /* CheckMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMarkView.swift; sourceTree = "<group>"; };
 		28AD6D76294B123600059419 /* TodoTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTextFieldView.swift; sourceTree = "<group>"; };
+		28AD6D78294B168500059419 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		28AD6D7A294B1FD000059419 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				28AD6D58294AFF7200059419 /* untilApp.swift */,
-				28AD6D69294B005B00059419 /* View */,
-				28AD6D68294B005400059419 /* ViewModel */,
-				28AD6D67294B004B00059419 /* Model */,
+				28AD6D69294B005B00059419 /* Views */,
+				28AD6D68294B005400059419 /* ViewModels */,
+				28AD6D67294B004B00059419 /* Models */,
 				28AD6D5C294AFF7300059419 /* Assets.xcassets */,
 				28AD6D5E294AFF7300059419 /* until.entitlements */,
 				28AD6D5F294AFF7300059419 /* Preview Content */,
@@ -81,21 +85,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		28AD6D67294B004B00059419 /* Model */ = {
+		28AD6D67294B004B00059419 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				28AD6D78294B168500059419 /* ItemModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		28AD6D68294B005400059419 /* ViewModel */ = {
+		28AD6D68294B005400059419 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				28AD6D7A294B1FD000059419 /* ListViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		28AD6D69294B005B00059419 /* View */ = {
+		28AD6D69294B005B00059419 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				28AD6D75294B122900059419 /* TodoTextFieldView */,
@@ -103,7 +109,7 @@
 				28AD6D6C294B0A7C00059419 /* TodayView */,
 				28AD6D5A294AFF7200059419 /* ContentView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		28AD6D6C294B0A7C00059419 /* TodayView */ = {
@@ -212,8 +218,10 @@
 			files = (
 				28AD6D73294B0E0E00059419 /* CheckMarkView.swift in Sources */,
 				28AD6D77294B123600059419 /* TodoTextFieldView.swift in Sources */,
+				28AD6D79294B168500059419 /* ItemModel.swift in Sources */,
 				28AD6D5B294AFF7200059419 /* ContentView.swift in Sources */,
 				28AD6D6B294B06B400059419 /* TodayView.swift in Sources */,
+				28AD6D7B294B1FD000059419 /* ListViewModel.swift in Sources */,
 				28AD6D71294B0AF500059419 /* ListView.swift in Sources */,
 				28AD6D59294AFF7200059419 /* untilApp.swift in Sources */,
 				28AD6D6F294B0AB300059419 /* CheckView.swift in Sources */,

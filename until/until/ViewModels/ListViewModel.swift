@@ -6,7 +6,9 @@
 //
 
 import Foundation
-class ListViewModel {
+
+class ListViewModel: ObservableObject {
+    
     @Published var items: [ItemModel] = []
     
     init(){
