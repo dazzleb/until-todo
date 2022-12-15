@@ -35,13 +35,23 @@ struct ContentView: View {
                 List{
                     ForEach(items) { item in
                         ListView(item: item)
-                    }
+                    }.onDelete(perform: deleteItem)
+                        .onMove(perform: moveItem)
                 }.listStyle(PlainListStyle())
+                
                         
-        }
+        }.navigationBarItems(trailing: EditButton())
         .padding()
     }
+    func deleteItem(indexSet: IndexSet) {
+        items.remove(atOffsets: indexSet)
+    }
+    func moveItem(indexSet: IndexSet, to: Int){
+        items.move(fromOffsets: indexSet, toOffset: to)
+    }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
