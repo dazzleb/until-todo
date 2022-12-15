@@ -17,10 +17,9 @@ struct ContentView: View {
      check 클릭시 리스트 업데이트 
      */
     
-    @State var items: [String] = [
-        "와칸다 포에버!",
-        "아바타 꿀잼",
-        "물의 길...☃️"
+    @State var items: [ItemModel] = [
+        ItemModel(title: "오늘 할일은 말이죠 ", isCompleted: false),
+        ItemModel(title: "클리어!", isCompleted: true)
     ]
 
     var body: some View {
@@ -34,8 +33,8 @@ struct ContentView: View {
 
                 /// List view
                 List{
-                    ForEach(items, id: \.self) { item in
-                            ListView(title: item)
+                    ForEach(items) { item in
+                        ListView(item: item)
                     }
                 }.listStyle(PlainListStyle())
                         

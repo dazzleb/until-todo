@@ -8,24 +8,51 @@
 import SwiftUI
 
 struct ListView: View {
-     let title: String
+     let item: ItemModel
     var body: some View {
         HStack{
+            /// Check
             ZStack{
-                CheckView()
-                CheckMarkView()
+                if item.isCompleted {
+                    CheckView()
+                    CheckMarkView()
+                }else {
+                    CheckView()
+                    }
                 }
                 .frame(width: 31, height: 30)
                 .shadow(color: Color.primary.opacity(0.14), radius: 3, x:2, y:5)
-            Text("아무것도 몰라요 몰라 몰라 진짜 몰라요 ")
+            
+            /// Text
+            if item.isCompleted{
+                Text("\(item.title)")
+                    .font(.title3)
+                    .strikethrough()
+                    .foregroundColor(Color.gray)
+                    .padding(.vertical, 8)
+            }else{
+                Text("\(item.title)")
+                    
+                    .font(.title2)
+                    .padding(.vertical, 8)
+            }
+
             Spacer()
         }
     }
 }
 
 struct ListView_Previews: PreviewProvider {
+    
+    static var item1 = ItemModel(title: "안녕하세요.", isCompleted: true)
+    static var item2 = ItemModel(title: "Hello.", isCompleted: false)
+    
     static var previews: some View {
-        ListView(title: "나도 몰라유~")
+        Group{
+            ListView(item: item1)
+            ListView(item: item2)
+        }.previewLayout(.sizeThatFits)
+        
     }
 }
 
