@@ -18,7 +18,7 @@ struct TodoTextFieldView: View {
                 TextField("이곳에 오늘 할일 을 입력해주세요.",
                           text: $textFieldText,
                           onCommit:{
-                    
+                    // return 하면 발동 : 리스트 추가
                 }).disableAutocorrection(true)
                     .underline()
                     .font(.headline)

@@ -9,6 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
+    
+    /*
+     텍스트 필드에 state 값을 글로벌로 변경 해서 전체 app 이 알아차리도록 해야 할 꺼 같음
+     온 커밋 시 리스트에 add
+     
+     check 클릭시 리스트 업데이트 
+     */
+    
     @State var items: [String] = [
         "와칸다 포에버!",
         "아바타 꿀잼",
