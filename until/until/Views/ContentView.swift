@@ -25,15 +25,18 @@ struct ContentView: View {
                 List{
                     ForEach(listViewModel.items) { item in
                         ListView(item: item)
+                            .listRowSeparatorTint(Color(.white))
                             .onTapGesture {
                                 withAnimation(.linear){
                                     listViewModel.updateItem(item: item)
                                 }
                             }
+                            
                     }
                      .onDelete(perform: listViewModel.deleteItem) // Delete
                      .onMove(perform: listViewModel.moveItem) // Edit
                 }.listStyle(PlainListStyle())
+                 
                 
                         
         }.navigationBarItems(trailing: EditButton()) // Edit Button
