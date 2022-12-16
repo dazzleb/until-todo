@@ -8,18 +8,23 @@
 import SwiftUI
 
 struct TodoTextFieldView: View {
-    @State var textFieldText: String = ""
+    @EnvironmentObject var listViewModel: ListViewModel
+    @State var textFieldText = ""
+    
+    var title: String = "이곳에 오늘 할일 을 입력해주세요."
     var body: some View {
         
         VStack{
             HStack(spacing: 5){
                 Text("🔥")
                     .font(.title)
-                TextField("이곳에 오늘 할일 을 입력해주세요.",
+                TextField("\(title)",
                           text: $textFieldText,
-                          onCommit:{
+                          
+                          onCommit:{ addItem()
                     // return 하면 발동 : 리스트 추가
-                }).disableAutocorrection(true)
+                })
+                    .disableAutocorrection(true)
                     .underline()
                     .font(.headline)
             }.padding(.leading, 40)
@@ -27,10 +32,17 @@ struct TodoTextFieldView: View {
         
 
     }
+    func addItem() {
+        listViewModel.addItem(title: textFieldText)
+            Task {
+                textFieldText = ""
+            }
+    }
 }
 
 struct TodoTextFieldView_Previews: PreviewProvider {
     static var previews: some View {
         TodoTextFieldView()
+        .environmentObject(ListViewModel())
     }
 }
