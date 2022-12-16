@@ -26,14 +26,16 @@ struct ListView: View {
             /// Text
             if item.isCompleted{
                 Text("\(item.title)")
-                    .font(.title3)
+                    .fontWeight(.light)
+                    .fontDesign(.rounded)
                     .strikethrough()
                     .foregroundColor(Color.gray)
                     .padding(.vertical, 8)
             }else{
                 Text("\(item.title)")
+                    .fontWeight(.regular)
+                    .fontDesign(.rounded)
                     
-                    .font(.title2)
                     .padding(.vertical, 8)
             }
 
