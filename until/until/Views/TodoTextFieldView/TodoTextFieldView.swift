@@ -11,7 +11,7 @@ struct TodoTextFieldView: View {
     @EnvironmentObject var listViewModel: ListViewModel
     @State var textFieldText = ""
     
-    var title: String = "이곳에 오늘 할일 을 입력해주세요."
+    var title: String = "이곳에 오늘 할일 을 적어보세요."
     var body: some View {
         
         VStack{
