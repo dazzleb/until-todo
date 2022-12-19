@@ -35,7 +35,6 @@ struct ListView: View {
                 Text("\(item.title)")
                     .fontWeight(.regular)
                     .fontDesign(.rounded)
-                    
                     .padding(.vertical, 8)
             }
 

@@ -11,10 +11,11 @@ struct TodoTextFieldView: View {
     @EnvironmentObject var listViewModel: ListViewModel
     @State var textFieldText = ""
     
-    var title: String = "이곳에 오늘 할일 을 적어보세요."
+    var title: String = "이곳에 오늘 할 일을 적어보세요."
     var body: some View {
         
         VStack{
+            
             HStack(spacing: 5){
                 Text("🔥")
                     .font(.title)
@@ -24,6 +25,7 @@ struct TodoTextFieldView: View {
                           onCommit:{ addItem()
                     // return 하면 발동 : 리스트 추가
                 })
+                .keyboardType(.default)
                     .disableAutocorrection(true)
                     .underline()
                     .font(.headline)

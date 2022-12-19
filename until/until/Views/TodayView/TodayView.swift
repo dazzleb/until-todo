@@ -34,6 +34,7 @@ struct TodayView: View {
         .background(Color.primary.colorInvert())
         .cornerRadius(6)
     }
+    
 }
 
 struct TodayView_Previews: PreviewProvider {

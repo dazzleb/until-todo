@@ -18,24 +18,45 @@ struct ContentView: View {
             TodayView()
             Spacer()
             // 오늘 할일을 적을 View
-            TodoTextFieldView()
-            Spacer()
-
-                /// List view
-                List{
-                    ForEach(listViewModel.items) { item in
-                        ListView(item: item)
-                            .listRowSeparatorTint(Color(.white))
-                            .onTapGesture {
-                                withAnimation(.linear){
-                                    listViewModel.updateItem(item: item)
-                                }
+            VStack{
+                TodoTextFieldView()
+                Spacer()
+            
+               if listViewModel.items.isEmpty {
+//                    List{
+//                        Text("").listRowSeparator(.hidden)
+//                    }.listStyle(PlainListStyle())
+                            VStack{
+                                    Text("✍🏻 오늘까지 해야 할 일들을 적어보세요!")
+                                        .font(.title3)
+                                        .foregroundColor(.brown)
                             }
-                            
-                    }
-                     .onDelete(perform: listViewModel.deleteItem) // Delete
-                     .onMove(perform: listViewModel.moveItem) // Edit
-                }.listStyle(PlainListStyle())
+
+                    Spacer(minLength: 250)
+                    
+                    
+                }else {
+                    /// List view
+                    List{
+                        ForEach(listViewModel.items) { item in
+                            LazyVStack{
+                                ListView(item: item)
+                                    
+                                    .onTapGesture {
+                                        withAnimation(.linear){
+                                            listViewModel.updateItem(item: item)
+                                        }
+                                    }
+                            }.listRowSeparator(.hidden)
+
+                                
+                        }
+                         .onDelete(perform: listViewModel.deleteItem) // Delete
+                         .onMove(perform: listViewModel.moveItem) // Edit
+                    }.listStyle(PlainListStyle())
+                }
+            }
+
                  
                 
                         

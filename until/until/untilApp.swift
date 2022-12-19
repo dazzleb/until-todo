@@ -18,6 +18,7 @@ struct untilApp: App {
         WindowGroup {
             NavigationView{ //어플 내의 모든 View가 Navigation View 로 이동
                 ContentView()
+                .preferredColorScheme(.light) // Force to .light mode
                     
             }.accentColor(.orange)
                 .environmentObject(listViewModel)
