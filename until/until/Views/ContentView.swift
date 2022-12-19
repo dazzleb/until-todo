@@ -58,10 +58,22 @@ struct ContentView: View {
             }
 
                  
-                
+
                         
-        }.navigationBarItems(trailing: EditButton()) // Edit Button
-        .padding()
+        }.navigationBarItems(leading:
+                                Button {
+                                    clear()
+                                } label: {
+                                    Text("Clear")
+                                },
+                             trailing:
+                                    EditButton()
+                            ) // Edit Button
+                            .padding()
+    }
+    func clear(){
+        listViewModel.allclear()
+        
     }
 }
 

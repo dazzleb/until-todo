@@ -20,7 +20,9 @@ class ListViewModel: ObservableObject {
     init(){
         getItem()
     }
-    
+    func allclear() {
+        items.removeAll()
+    }
     func getItem() {
         guard
             let data = UserDefaults.standard.data(forKey: itemsKey),
