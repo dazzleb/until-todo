@@ -11,7 +11,7 @@ import SwiftUI
 struct untilApp: App {
     // body 안에서는 안됨
     
-    /// 해당 객체가 변화가 있다면 앱이 재작동
+    /// 해당 객체가 변화가 있다면 앱이 재작동 ( 상위 뷰 이기에 StateObject )
     @StateObject var listViewModel: ListViewModel = ListViewModel()
     
     var body: some Scene {

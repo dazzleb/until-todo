@@ -10,8 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var listViewModel: ListViewModel
-    
- 
+    //Action alert
+    @State var showingSheet = false
+ //MARK: BODY
     var body: some View {
         VStack {
             /// 오늘 날짜를 표현 하는 View
@@ -21,64 +22,64 @@ struct ContentView: View {
             VStack{
                 TodoTextFieldView()
                 Spacer()
-            
+                //MARK: 리스트
                if listViewModel.items.isEmpty {
-//                    List{
-//                        Text("").listRowSeparator(.hidden)
-//                    }.listStyle(PlainListStyle())
-                            VStack{
-                                    Text("✍🏻 오늘까지 해야 할 일들을 적어보세요!")
-                                        .font(.title3)
-                                        .foregroundColor(.brown)
+                   /// 아이템이 존재하지 않을 때
+                    VStack{
+                    Text("✍🏻 오늘까지 해야 할 일을 적어보세요!")
+                     .font(.title3)
+                     .foregroundColor(.brown)
+                      .lineLimit(nil)
                             }
-
                     Spacer(minLength: 250)
-                    
-                    
                 }else {
-                    /// List view
+                    /// 아이템이 존재 
                     List{
                         ForEach(listViewModel.items) { item in
                             LazyVStack{
+                                
                                 ListView(item: item)
-                                    
+                                
                                     .onTapGesture {
                                         withAnimation(.linear){
                                             listViewModel.updateItem(item: item)
                                         }
                                     }
-                            }.listRowSeparator(.hidden)
-
                                 
+                            }.listRowSeparator(.hidden)
                         }
                          .onDelete(perform: listViewModel.deleteItem) // Delete
                          .onMove(perform: listViewModel.moveItem) // Edit
                     }.listStyle(PlainListStyle())
                 }
             }
-
-                 
-
-                        
-        }.navigationBarItems(leading:
+        }
+        //MARK: 바 아이템
+        .navigationBarItems(leading:
                                 Button {
-                                    clear()
+                                    //clear()
+                                    self.showingSheet = true
                                 } label: {
-                                    Text("Clear")
-                                },
+                                    Text("All Clear")
+                                }.confirmationDialog(
+                                    "리스트 전체 삭제 할까요?",
+                                    isPresented: $showingSheet) {
+                                    Button("전체 삭제", role:  .destructive, action: clear)
+                                    Button("취소", role: .cancel) {}
+                                  }message: {
+                                      Text("리스트 를 전체 삭제 할까요?")
+                                    },
                              trailing:
                                     EditButton()
-                            ) // Edit Button
-                            .padding()
+                                )
+                                .padding()
     }
+//MARK: 함수
     func clear(){
         listViewModel.allclear()
-        
     }
 }
-
-
-
+//MARK: 미리보기
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{

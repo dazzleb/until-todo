@@ -29,8 +29,8 @@ struct TodoTextFieldView: View {
                     .disableAutocorrection(true)
                     .underline()
                     .font(.headline)
-            }.padding(.leading, 40)
-        }.padding(16)
+            }.padding(.leading, 30)
+        }.padding(10)
         
 
     }
