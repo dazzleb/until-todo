@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
-
+import GoogleMobileAds
 @main
 struct untilApp: App {
+    // ADMob 초기화
+    init() {
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+    }
     // body 안에서는 안됨
     
     /// 해당 객체가 변화가 있다면 앱이 재작동 ( 상위 뷰 이기에 StateObject )

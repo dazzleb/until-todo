@@ -26,11 +26,15 @@ struct ContentView: View {
                if listViewModel.items.isEmpty {
                    /// 아이템이 존재하지 않을 때
                     VStack{
+                        //ca-app-pub-5125834714357837/1392130842
+                        //ca-app-pub-3940256099942544/2934735716 (Sample)
+                    
                     Text("✍🏻 오늘까지 해야 할 일을 적어보세요!")
                      .font(.title3)
                      .foregroundColor(.brown)
                       .lineLimit(nil)
                             }
+                   BannerAd(unitID: "ca-app-pub-5125834714357837/1392130842")
                     Spacer(minLength: 250)
                 }else {
                     /// 아이템이 존재 
