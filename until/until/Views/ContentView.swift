@@ -28,14 +28,17 @@ struct ContentView: View {
                     VStack{
                         //ca-app-pub-5125834714357837/1392130842
                         //ca-app-pub-3940256099942544/2934735716 (Sample)
-                    
+                    Spacer(minLength: 250)
                     Text("✍🏻 오늘까지 해야 할 일을 적어보세요!")
                      .font(.title3)
                      .foregroundColor(.brown)
                       .lineLimit(nil)
                             }
-                   BannerAd(unitID: "ca-app-pub-5125834714357837/1392130842")
-                    Spacer(minLength: 250)
+                   Spacer(minLength: 250)
+                   VStack{
+                       BannerAd(unitID: "ca-app-pub-5125834714357837/1392130842")
+                   }
+                    
                 }else {
                     /// 아이템이 존재 
                     List{

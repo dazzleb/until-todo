@@ -11,6 +11,8 @@
 		<key>UIImageName</key>
 		<string>lunchicon1</string>
 	</dict>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-5125834714357837~1935056324</string>
 	<key>SKAdNetworkItems</key>
