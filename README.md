@@ -13,10 +13,10 @@
 
 기능 : 한번에 삭제하기 , 슬라이드로 삭제하기 , 투두 작성하기, 투두 위치변경하기 , 할 일 체크하기 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/120624961/211976647-7e63d5a7-a4da-44ab-a45b-58336111b406.png" width="450" height="600"/>
-  <img src="https://user-images.githubusercontent.com/120624961/211976658-c76811ac-c8e5-4568-b963-feea0af0d65f.png" width="450" height="600"/>
-    <img src="https://user-images.githubusercontent.com/120624961/211976664-1b8445ab-e7ab-434c-a70b-137748e48bee.png" width="450" height="600"/>
-    <img src="https://user-images.githubusercontent.com/120624961/211976666-09eab9af-a373-46d4-8dbb-e56d163181d3.png" width="450" height="600"/>
-    <img src="https://user-images.githubusercontent.com/120624961/211976667-11fa1b65-24d0-4e04-af98-ddf885fe7ba6.png" width="450" height="600"/>
+  <img src="https://user-images.githubusercontent.com/120624961/211976647-7e63d5a7-a4da-44ab-a45b-58336111b406.png" width="250" height="500"/>
+  <img src="https://user-images.githubusercontent.com/120624961/211976658-c76811ac-c8e5-4568-b963-feea0af0d65f.png" width="250" height="500"/>
+    <img src="https://user-images.githubusercontent.com/120624961/211976664-1b8445ab-e7ab-434c-a70b-137748e48bee.png" width="250" height="500"/>
+    <img src="https://user-images.githubusercontent.com/120624961/211976666-09eab9af-a373-46d4-8dbb-e56d163181d3.png" width="250" height="500"/>
+    <img src="https://user-images.githubusercontent.com/120624961/211976667-11fa1b65-24d0-4e04-af98-ddf885fe7ba6.png" width="250" height="500"/>
 </p>
 
