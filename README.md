@@ -1,5 +1,5 @@
-# until-todo
-<span style="background-color: #F7DDBE">오늘까지</span>
+# 오늘까지 until-todo
+
 
 ## 앱스토어 에서 지금 사용해보세요. 
 🚀 App Store: https://apps.apple.com/app/id1660503307 
